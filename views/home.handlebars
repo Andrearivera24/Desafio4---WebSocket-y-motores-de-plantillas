@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="/css/style.css">
+
+<div id='products'> 
+    
+     <h1>Lista de productos</h1>
+    <ul>
+      {{#each products}}
+      <li>
+         <h2>{{this.title}}</h2>
+         <p>{{this.description}}</p>
+         <p>{{this.price}}</p>
+         <p>{{this.code}}</p>
+         <p>{{this.stock}}</p>
+         <p>{{this.category}}</p>
+      </li>
+      {{/each}}
+   </ul>
+
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script> 
+{{!-- para que se instancie el socket desdeel cliente  --}}
+<script src='/socket.io/socket.io.js'></script>
+{{!-- referencio el main de js que está en la carpeta public  --}}
+<script src='/js/main.js'></script> 
+{{!-- 
+acá renderizar los productos.  --}}

@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/css/style.css">
+
+
+<h1>Add Product</h1>
+<form >
+	<input type="text" required id="title" name="title" placeholder="Title">
+	<input type="text" required id="description" name="description" placeholder="Description">
+	<input type="text" required id="price" name="price" placeholder="Price">
+	<input type="text" required id="thumbnail" name="thumbnail" placeholder="Thumbnail">
+	<input type="text" required id="code" name="code" placeholder="Code">
+	<input type="text" required id="stock" name="stock" placeholder="Stock">
+	<input type="text" required id="category" name="category" placeholder="Category">
+	<input type="text" required id="status" name="status" placeholder="Status">
+
+	<button type="submit" onclick="addProduct()">Add</button>
+	
+</form>
+
+<h1>Delete product</h1>
+<input type="text" required id="id" name="id" placeholder="Id">
+<button id="send" onclick="deleteProduct()">Delete</button>
+
+
+<div id="productsContainer">
+	{{!-- acá voy a insertar los cambios en los productos --}}
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.5/dist/sweetalert2.all.min.js"></script>
+{{!-- para que se instancie el socket desdeel cliente --}}
+<script src='/socket.io/socket.io.js'></script>
+{{!-- referencio el main de js que está en la carpeta public --}}
+<script src='/js/main.js'></script>
